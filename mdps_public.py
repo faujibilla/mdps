@@ -1,3 +1,6 @@
+# -*- coding: utf-8 -*-
+
+
 import pickle
 import streamlit as st
 from streamlit_option_menu import option_menu
@@ -5,13 +8,11 @@ from streamlit_option_menu import option_menu
 
 # loading the saved models
 
-Diabetes_model = pickle.load(open('diabetes_model.sav', 'rb'))
+diabetes_model = pickle.load(open('diabetes_model.sav', 'rb'))
 
-heart_model = pickle.load(open('heartdisease_model.sav', 'rb'))
+heart_disease_model = pickle.load(open('heart_disease_model.sav', 'rb'))
 
-parkinson_model = pickle.load(open('Parkinsons_model.sav', 'rb'))
-
-breast_cancer_model = pickle.load(open('Breast_cancer_model.sav', 'rb'))
+parkinsons_model = pickle.load(open('parkinsons_model.sav', 'rb'))
 
 
 
@@ -237,6 +238,9 @@ if (selected == "Parkinsons Prediction"):
           parkinsons_diagnosis = "The person does not have Parkinson's disease"
         
     st.success(parkinsons_diagnosis)
+
+
+
 
 
 
